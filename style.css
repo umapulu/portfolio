@@ -1,0 +1,314 @@
+:root {
+  --bg: #f7f7f9;
+  --card: #ffffff;
+  --muted: #6b7280;
+  --accent: #1f6feb;
+  --radius: 14px;
+  --max-width: 900px;
+  --text: #0f1724;
+  --shadow: 0 8px 30px rgba(14, 20, 30, 0.08);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+  width: 100%;
+  max-width: var(--max-width);
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 15px;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #1253c8;
+  text-decoration: underline;
+}
+
+/* ---------- Card ---------- */
+
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), var(--card));
+  width: 100%;
+  max-width: var(--max-width);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 26px;
+  align-items: center;
+}
+
+.avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  background: linear-gradient(135deg, #eef2ff, #fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.text-card {
+  max-width: 800px;
+  background: #fafafa;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  margin: 3rem auto;
+  color: #333;
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.text-card h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111;
+  text-align: center;
+}
+
+.text-card p {
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .text-card {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    font-size: 1rem;
+  }
+}
+
+/* ----------- Carousel ------------*/
+
+.carousel-section {
+  max-width: 900px;
+  margin: 4rem auto;
+  text-align: center;
+}
+
+.carousel-section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.project-card {
+  flex: 0 0 100%;
+  background: #fafafa;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  margin: 0 0.5rem;
+  text-align: left;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #222;
+}
+
+.project-card p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border: none;
+  font-size: 2rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 45%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+  background: #f0f0f0;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+@media (max-width: 700px) {
+  .project-card {
+    padding: 1.8rem;
+  }
+}
+
+
+/* ---------- Text Styles ---------- */
+
+h1,
+h2,
+h3 {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 24px;
+  letter-spacing: -0.2px;
+}
+
+h2 {
+  font-size: 18px;
+  color: var(--accent);
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 14px;
+  color: #111827;
+}
+
+p.tag {
+  margin: 8px 0 16px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.bio {
+  color: #111827;
+  line-height: 1.6;
+  margin: 0 0 16px;
+}
+
+/* ---------- Skills ---------- */
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pill {
+  background: #f3f4f6;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  color: #111827;
+  border: 1px solid rgba(15, 23, 36, 0.03);
+}
+
+/* ---------- Buttons & Links ---------- */
+
+.links {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn:hover {
+  background: #1253c8;
+  transform: translateY(-1px);
+}
+
+/* ---------- Sections ---------- */
+
+section {
+  margin-bottom: 20px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 640px) {
+  .card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  .meta {
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  nav {
+    font-size: 14px;
+  }
+}
