@@ -19,31 +19,110 @@
   <article class="text-card">
     <div class="meta">
       <h1>Projects</h1>
-      <div class="carousel">
-        <div class="carousel-track">
-          <div class="carousel-card">
-            <div>
-              <h3>Critter-World</h3>
-              <p>A simulation engine that models evolving creatures and their interactions in a dynamic environment.</p>
-            </div>
+
+      <div class="project-list">
+        <a href="#critter" class="project-card clickable">
+          <h3>Critter-World 🐛</h3>
+          <p>
+            A simulation engine modeling evolving creatures in a dynamic environment.
+          </p>
+          <p class="tag">Java · Algorithms · Simulation</p>
+        </a>
+
+        <a href="#mail" class="project-card clickable">
+          <h3>Mail Optimization 📧</h3>
+          <p>
+            M/M/N simulation of Cornell North Campus Mailroom.
+          </p>
+          <p class="tag">Python · Algorithms · Data Analysis</p>
+        </a>
+
+        <a href="#eventery" class="project-card clickable">
+          <h3>Eventery Mobile App 🗓️</h3>
+          <p>
+            Swift-based app for on campus event discovery and coordination.
+          </p>
+          <p class="tag">Swift · Mobile · UX</p>
+        </a>
+      </div>
+
+      <!-- ---------- Modals ---------- -->
+
+      <div id="critter" class="modal">
+        <div class="modal-content">
+          <a href="#" class="modal-close">×</a>
+          <h2>Critter-World</h2>
+          <p>
+            Built a discrete-time simulation framework where agents evolve based on
+            fitness functions, environmental constraints, and interaction rules.
+          </p>
+          <ul>
+            <li>Designed core simulation loop and agent data structures</li>
+            <li>Displayed evolutionary mechanics and scoring heuristics</li>
+            <li>Implemented "Critter Language" parser and tokenizer</li>
+          </ul>
+
+          <div class="links">
+            <a class="btn" href="https://github.com/umapulu/critter-world" target="_blank">
+              View Code
+            </a>
           </div>
-          <div class="carousel-card">
-            <div>
-              <h3>Mail Optimization</h3>
-              <p>Developed an algorithmic mail-sorting system improving route efficiency using graph algorithms.</p>
-            </div>
-          </div>
-          <div class="carousel-card">
-            <div>
-              <h3>Eventery Mobile App</h3>
-              <p>A React-based app for event discovery and coordination, integrating real-time updates and feedback.</p>
-            </div>
-          </div>
-          <div class="carousel-card">Project 4</div>
-          <div class="carousel-card">Project 5</div>
-          <div class="carousel-card">Project 6</div>
         </div>
       </div>
+
+      <div id="mail" class="modal">
+        <div class="modal-content">
+          <a href="#" class="modal-close">×</a>
+          <h2>Mail Optimization</h2>
+          <p>
+            Modeled mailroom customer and worker simulation and applied M/M/n
+            queueing theory.
+          </p>
+          <ul>
+            <li>Collected real time data to generate realistic randomized mailroom sims</li>
+            <li>Simulated line backup and generated wait-times with various numbers of workers</li>
+            <li>Provided feedback to Cornell RPCC Mailroom</li>
+
+          </ul>
+
+          <div class="links">
+            <a class="btn" href="https://github.com/umapulu/mail-optimization" target="_blank">
+              View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="eventery" class="modal">
+        <div class="modal-content">
+          <a href="#" class="modal-close">×</a>
+          <h2>Eventery Mobile App</h2>
+          <p>
+            A mobile Swift application enabling event discovery and
+            coordination with real-time updates from users.
+          </p>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0j2arZBJBic?si=j2Of8HF4gHc7l4Dg"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+
+          <ul>
+            <li>Built UI components using Swift</li>
+            <li>Integrated real-time updates and server backend</li>
+            <li>Implemented calendar, map, events display pages</li>
+
+          </ul>
+
+          <div class="links">
+            <a class="btn" href="https://github.com/umapulu/eventery" target="_blank">
+              View Code
+            </a>
+          </div>
+        </div>
+      </div>
+
     </div>
     </div>
   </article>
