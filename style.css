@@ -112,6 +112,12 @@ nav a:hover {
     margin: 2rem 1rem;
     font-size: 1rem;
   }
+
+  .footer-inner {
+    padding: 1.5rem;
+    margin: 2rem 1rem;
+    font-size: 1rem;
+  }
 }
 
 :root {
@@ -390,5 +396,78 @@ section {
 
   .content p {
     font-size: 14px;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.footer-inner {
+  padding: 2.5rem;
+  margin: 3rem auto;
+  width: 100%;
+  max-width: var(--max-width);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.705), var(--card));
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px 26px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-name {
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 4px 0 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 14px;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
   }
 }
